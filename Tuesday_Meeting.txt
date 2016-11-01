@@ -1,0 +1,26 @@
+
+
+*Hot things in the competition*
+Random Forests
+SVC
+Neural Nets
+XGBoost
+
+How do we combine the files? 
+
+Transform Data
+Tune parameters
+Ensemble
+
+Useful websites:
+
+https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/     #XGboost tuning
+http://xgboost.readthedocs.io/en/latest/python/python_api.html
+http://xgboost.readthedocs.io/en/latest/python/python_intro.html
+
+http://pybrain.org/                                                                                         #Neural Nets
+http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/
+http://scikit-learn.org/stable/modules/neural_networks_supervised.html
+
+https://www.kaggle.com/c/titanic/details/getting-started-with-random-forests                                #Random Forests
+http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
