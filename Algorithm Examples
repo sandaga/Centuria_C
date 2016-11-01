@@ -1,0 +1,50 @@
+data = pandas.read_csv("/Users/mitchellsailsbery/Documents/trainmodtrue_values.csv")
+
+test_data = pandas.read_csv("/Users/mitchellsailsbery/Documents/testmod_values.csv") 
+
+
+
+target = data.loss
+
+train = data[data.columns[2:-1]]
+
+
+
+#forest = ExtraTreesRegressor(10000)
+
+
+#forest.fit(train.iloc[:],target.iloc[:])
+
+
+test = test_data[test_data.columns[1:]]
+
+#trees = ExtraTreesClassifier(1000)
+#trees.fit(train.iloc[:],target.iloc[:])
+
+#target = np.array(target)
+#train = np.array(train)
+#pca = PCA(n_components=COMPONENT_NUM, whiten=True)
+#pca.fit(train)
+#train = pca.transform(train)
+
+#svc = SVC()
+#svc.fit(train[:], target.iloc[:])
+
+gbm = GradientBoostingRegressor().fit(train,target)
+
+#gbm = xgb.XGBRegressor(max_depth=5, learning_rate=0.05, n_estimators=300, nthread=2).fit(train,target)
+
+
+#prediction = forest.predict(test.iloc[:])
+prediction = gbm.predict(test)
+
+#prediction = predict.predict(test.iloc[:])
+
+#prediction = forest.predict_proba(test.iloc[:])
+
+
+
+output = pandas.DataFrame(prediction)
+
+
+output.to_csv("/Users/mitchellsailsbery/Documents/Mod_xgb_sklearn_default.csv")
